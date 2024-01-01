@@ -1,6 +1,6 @@
 import Modal from 'react-bootstrap/Modal';
 import { Link } from 'react-router-dom';
-import "../styles/modal.css"
+import "../Styles/modal.css"
 // import Button from 'react-bootstrap/Button';
 export function VerticalModal(props) {
   return (
