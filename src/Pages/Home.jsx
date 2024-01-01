@@ -2,11 +2,8 @@ import { useEffect, useState } from 'react'
 import Table from 'react-bootstrap/Table';
 import { VerticalModal } from '../Components/VerticalModal';
 import { AxiosProvider } from '../Axios/AxiosProvider';
-// import { BackdropModal } from '../Components/BackdropModal';
 import { Product } from '../Entities/Product';
 import Button from 'react-bootstrap/Button';
-import ToggleButton from 'react-bootstrap/ToggleButton';
-import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
 import "../Styles/home.css";
 
 export default function Home() {
@@ -18,9 +15,6 @@ export default function Home() {
         setCreatedProduct(false)
         setDeletedProduct(false)
     }
-    // backDropModal
-    // const [error, setError] = useState(false)
-
     //Button
     const [isLoadingButton, setLoadingButton] = useState(false);
     const handleClick = () => {
@@ -126,11 +120,6 @@ export default function Home() {
 
     return (
         <main>
-            {/* {error && (<BackdropModal
-                title="Erro Interno"
-                message="Reinicie a aplicação e tente novamente."
-                namebutton="Fechar"
-            />)} */}
             <VerticalModal
                 show={showModal}
                 onHide={handleVerticalModal}
@@ -196,7 +185,7 @@ export default function Home() {
 
             <div>
                 {createdProduct && <p className='text-center text-success'>Produto cadastrado com sucesso!</p>}
-                {/* {deletedProduct && <p className='text-center text-danger'>Produto deletado com sucesso!</p>} */}
+                {deletedProduct && <p className='text-center text-danger'>Produto deletado com sucesso!</p>}
                 {tableData.length != 0 ? (<div>
                     <Table striped bordered hover>
                         <thead>
